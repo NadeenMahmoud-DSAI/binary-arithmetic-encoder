@@ -24,6 +24,7 @@ Unlike Huffman coding which assigns discrete variable-length codes to specific s
 
 The system is executed via standard command-line arguments.
 
+Markdown
 ### Compilation
 Compile all modular components using `javac`:
 
