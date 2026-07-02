@@ -1,4 +1,3 @@
-Markdown
 # Binary Arithmetic Encoder
 
 A modular, Java-based implementation of lossless data compression using Arithmetic Coding. This engine dynamically evaluates the probability distribution of input data, performs recursive interval rescaling to generate optimal bit sequences, and strictly manages bitwise I/O for efficient binary packing.
@@ -27,19 +26,18 @@ The system is executed via standard command-line arguments.
 ### Compilation
 Compile all modular components using `javac`:
 
-```bash
-javac *.java
+<pre><code>javac *.java</code></pre>
 
-Compression Pipeline
+### Compression Pipeline
 To encode a text file into a compressed binary file:
 
-Bash
-java Main compress <input_file.txt> <probabilities.csv> <output_compressed.bin>
-Example: java Main compress input.txt probabilities.csv compressed.bin
+<pre><code>java Main compress &lt;input_file.txt&gt; &lt;probabilities.csv&gt; &lt;output_compressed.bin&gt;</code></pre>
 
-Decompression Pipeline
+*Example:* `java Main compress input.txt probabilities.csv compressed.bin`
+
+### Decompression Pipeline
 To reconstruct the original file from the binary data and probability map:
 
-Bash
-java Main decompress <input_compressed.bin> <probabilities.csv> <output_decompressed.txt>
-Example: java Main decompress compressed.bin probabilities.csv decompressed.txt
+<pre><code>java Main decompress &lt;input_compressed.bin&gt; &lt;probabilities.csv&gt; &lt;output_decompressed.txt&gt;</code></pre>
+
+*Example:* `java Main decompress compressed.bin probabilities.csv decompressed.txt`
